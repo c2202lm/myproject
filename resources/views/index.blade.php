@@ -37,7 +37,7 @@
 </head>
 
 <body>
-  
+    @csrf
   <div class="hero_area">
     <div class="hero_social">
       <a href="">
@@ -100,10 +100,11 @@
                 <a href="" class="d-flex align-items-center">
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </a>
-              </form>              
-              <a href="login.blade.php">
-                <i class="fa fa-user" aria-hidden="true"></i>
-              </a>
+              </form>       
+              @csrf     
+                <a href="{{ Route('login')}}">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </a>
               <a href="">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
               </a>

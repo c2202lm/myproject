@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +15,9 @@ use App\Http\Controllers\loginController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('login', function(){
-    return view('login');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+Route::get('index', [IndexController::class, 'index'])->name('index');
+Route::get('login', [loginController::class, 'login'])->name('login');
+Route::get('register', [RegisterController::class, 'register'])->name('register');

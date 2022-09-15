@@ -41,11 +41,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							   <label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Remember me</label>
 						 </span>
                                 <div class="forgot">
-                                    <h6><a href="#">Forgot Password</a> | <a href="#">Sign Up.</a></h6>
+                                    <h6><a href="#">Forgot Password</a> |@csrf <a href="{{Route('register')}}">Sign Up.</a></h6>
                                 </div>
                                 <div class="clear"> </div>
-                            </div>                        
-                                <a class="login" href="#">LOGIN</a>
+                            </div>
+                                                  
+                                <a class="login" href="{{Route('index')}}">LOGIN</a>
                         </form>
                         <div class="header-left-top">
                             <div class="sign-up">
